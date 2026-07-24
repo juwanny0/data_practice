@@ -2,7 +2,7 @@
 /Task_*/
 /*_download_manifest.json
 
-# 원본 데이터 형식이 다른 위치에 생기는 경우도 차단
+# 원본 데이터 형식이 다른 위치에 생기는 경우 차단
 *.parquet
 *.mp4
 *.bag
