@@ -1,0 +1,29 @@
+# 실제 LeRobot 데이터셋과 다운로드 정보
+/Task_*/
+/*_download_manifest.json
+
+# 원본 데이터 형식이 다른 위치에 생기는 경우도 차단
+*.parquet
+*.mp4
+*.bag
+*.npy
+*.npz
+
+# Python 가상환경과 캐시
+/venv/
+/.venv/
+__pycache__/
+*.py[cod]
+
+# 프로그램이 생성하는 분석 결과와 실행 기록
+/analysis_results/
+**/analysis_results/
+/terminal_execution.log
+/episode_outlier_analysis.png
+/outlier_analysis_report.pdf
+
+# 편집기 및 운영체제 파일
+/.vscode/
+/.idea/
+.DS_Store
+
