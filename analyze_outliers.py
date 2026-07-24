@@ -622,7 +622,9 @@ def analyze_dataset(
     q1_len, q3_len = np.quantile(lengths, [0.25, 0.75])
     iqr_len = float(q3_len - q1_len)
     lower_len = max(0.0, float(q1_len - 1.5 * iqr_len))
-    upper_len = float(q3_len + 1.5 * iqr_len)
+    upper_len = float(
+        q3_len + 1.5 * iqr_len + max(2.0, 0.02 * float(np.median(lengths)))
+    )
     severe_lower_len = max(0.0, float(q1_len - 3.0 * iqr_len))
     severe_upper_len = float(q3_len + 3.0 * iqr_len)
     length_mask = (lengths < lower_len) | (lengths > upper_len)
